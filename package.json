@@ -1,9 +1,13 @@
 {
-  "name": "Template Landerz",
+  "name": "Template",
   "version": "1.0.0",
   "description": "GulpJS, Browsersync, Consumo de API con Axios, Sass, Bootstrap",
   "author": "Yahair Sotomayor",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yahja/GulpJS.git"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "carousel-js": "^4.0.0",
