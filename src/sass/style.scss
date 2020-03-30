@@ -1,0 +1,320 @@
+@import '_fonts';
+@import '_colors';
+@import '_helpers';
+@import '_forms';
+@import '_responsive';
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: white;
+    font-family: $primary-font;
+    font-size: 1em;
+    padding-top: 56px;
+    @media (max-width: $mobile){
+        padding-top: 0px;
+    }
+    h1{
+        font-size: 3.5em;
+        font-weight: bold;
+        &.brand{
+            font-size: 2.5em;
+            font-weight: 100;
+            @media (max-width: $mobile){
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 1031;
+            }
+        }
+        @media (max-width: $mobile){
+            font-size: 1.5em;
+        }
+    }
+    h2{
+        font-size: 2.5em;
+        font-weight: bold;
+        color: black;
+    }
+    h3{
+        font-size: 2em;
+    }
+    p{
+        color: $middle-gray;
+        font-weight: 100;
+    }
+    header{
+        box-shadow: 4px 0px 20px -10px $shadow-nav;
+        nav.navbar{
+            background-color: white;
+            ul.nav{
+                li{
+                    a{
+                        color: black;
+                        transition: all 0.2s ease-in-out;
+                        &:hover{
+                            color: $primary-color;
+                        }
+                    }
+                    &.active{
+                        a{
+                            color: $primary-color;
+                        }
+                    }
+                    @media (max-width: $mobile){
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        font-size: 1.5em;
+                    }
+                }
+                @media (max-width: $mobile){
+                    margin-top: 2em;
+                }
+            }
+            @media (max-width: $mobile){
+                position: fixed;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                display: none;
+            }
+        }
+        a.menu-toggle,
+        a.close-menu{
+            float: right;
+            color: black;
+            padding: 20px 20px 20px 0px;
+            span{
+                font-size: 1.7em;
+            }
+        }
+        a.close-menu{
+            padding: 14px 20px 0px 0px;
+            position: absolute;
+            right: 0px;
+        }
+        &.hide-logo{
+            z-index: 1032;
+        }
+        &.show-logo{
+            z-index: 1030;
+        }
+        @media (max-width: $mobile){
+            background-color: white;
+        }
+    }
+    section{
+        &#home{
+            margin-top: 80px;
+            background-color: white;
+            .home-row{
+                .home-left{
+                    padding-top: 3em;
+                    margin-top: 3em;
+                    @media (max-width: $mobile){
+                        padding-top: 0px;
+                        margin-top: 0px;
+                        order: 0;
+                    }
+                }
+                .home-right{
+                    @media (max-width: $mobile){
+                        margin-top: 5em;
+                        order: -1;
+                    }
+                }
+                @media (max-width: $mobile) {
+                    display: flex;
+                    align-items: flex-start;
+                    height: 100%;
+                }
+            }
+            @media (min-width: $tablet-land){
+                overflow-x: hidden;
+            }
+            @media (max-width: $mobile){
+                img{
+                    width: 100%;
+                }
+                margin-top: 0px;
+            }
+        }
+        &#features{
+            background: $light-gray;
+            padding-top: 5em;
+            a{
+                .box{
+                    border-radius: 5px;
+                    transition: all 0.5s ease-in-out;
+                    &--white{
+                        background-color: white;
+                        &:hover{
+                            box-shadow: 0px 0px 15px 0px $shadow-nav;
+                        }
+                    }
+                    .icon{
+                        background: $primary-color;
+                        border-radius: 50%;
+                        padding: 10px;
+                        &:before{
+                            color: white;
+                            font-size: 1.5em;
+                        }
+                    }
+                    h3{
+                        font-size: 1em;
+                        font-weight: 500;
+                        color: black;
+                    }
+                    span{
+                        color: $primary-color;
+                    }
+                }
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            .prototype{
+                h2{
+                    margin-top: 3em;
+                    margin-bottom: 3em;
+                    @media (max-width: $mobile){
+                        font-size: 1.2em;
+                        margin-top: 0em;
+                        margin-bottom: 1em;
+                    }
+                }
+                p{
+                    color: gray;
+                    font-weight: 100;
+                }
+                .prototype-right{
+                    padding-left: 3em;
+                    padding-top: 1.5em;
+                    margin-top: 3em;
+                    ul{
+                        list-style: none;
+                        li{
+                            color: gray;
+                            span{
+                                color: $light-green;
+                                font-size: 1.4em;
+                                float: left;
+                                margin-top: 1px;
+                            }
+                        }
+                    }
+                    .founder-box{
+                        padding: 1em;
+                        margin-bottom: 3em;
+                        @media (max-width: $mobile){
+                            margin-left: 0px;
+                            margin-right: 0px;
+                        }
+                    }
+                    @media (max-width: $mobile){
+                        padding-left: 15px;
+                        padding-top: 0px;
+                        margin-top: 0px;
+                    }
+                }
+            }
+            @media (max-width: $mobile){
+                padding-top: 2em;
+            }
+        }
+        &#about-us, &#contact{
+            background: $light-gray;
+            padding-top: 5em;
+            .row-aboutus{
+                padding-bottom: 3em;
+                padding-top: 3em;
+                margin-bottom: 3em;
+                @media (max-width: $mobile){
+                    padding-top: 0em;
+                    margin-top: 15px;
+                }
+                .about-right{
+                    padding-left: 3em;
+                    @media (max-width: $mobile){
+                        padding-left: 15px;
+                        margin-left: 0em;
+                        margin-top: 15px;
+                    }
+                }
+            }
+            @media (max-width: $mobile){
+                padding-top: 2em;
+            }
+            .contact-form{
+                padding: 3em;
+                @media (max-width: $mobile){
+                    padding: 1em;
+                }
+            }
+        }
+        &#testimonials{
+            padding-top: 5em;
+            overflow-x: hidden;
+            height: 650px;
+            .container-carousel{
+                ul.slides-content{
+                    height: 316px;
+                    li.slides{
+                        max-width: 800px;
+                        margin: 0px auto;
+                        list-style: none;
+                        transition: all .2s ease-out;
+                        position: absolute;
+                        left: -900px;
+                        
+                        img{
+                            max-width: 100px;
+                        }
+                        &-active{
+                            display: block;
+                            position: absolute;
+                            left: 0px;
+                            right: 0px;
+                        }
+                        p{
+                            @media (max-width: $mobile){
+                                padding-left: 15px;
+                                padding-right: 15px;
+                            }
+                        }
+                    }
+                    @media (max-width: $mobile){
+                        height: 450px;
+                    }
+                }
+                
+                .box-bullets{
+                    .bullet{
+                        background-color: $soft-gray;
+                        width: 10px;
+                        height: 10px;
+                        cursor: pointer;
+                        &.carousel-thumbnail-active{
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+            }
+            @media (max-width: $mobile){
+                padding-top: 0em;
+            }
+        }
+    }
+    footer{
+        padding-top: 3em;
+        padding-bottom: 1em;
+        margin-top: 3em;
+        @media (max-width: $mobile){
+            margin-top: 0em;
+        }
+    }
+}
