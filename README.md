@@ -4,6 +4,9 @@ Gulp JS 4.0 Basic Bootstrap template, work with files like javascript and sass..
 2. Go to GulpJS `cd GulpJS` 
 3. Install all the dependencies `npm i`
 4. Run `gulp` to see the basic template
+
 The source files (Javascript, Sass, and images) are in the src folder.
+
 The compile files are in the build folder.
+
 Have fun :)
